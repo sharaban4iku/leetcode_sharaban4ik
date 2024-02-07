@@ -1,15 +1,12 @@
-
-def twoSumNaive(arr, target):
-    for i in range(len(arr) - 1):
-        for j in range(i + 1, len(arr)):
-            if arr[i] + arr[j] == target:
-                print(f"Pair: {arr[i]} + {arr[j]}")
+nums = [2,7,11,15] 
+target = 9
 
 
 
-# Driver Code
-arr = [5, 5, 2, 12, 3, 88]
-target = 12
-
-# Function call inside print
-twoSumNaive(arr, target)
+class Solution(object):
+    def twoSum(self, nums, target):
+        for i in range(0,len(nums)):
+            for b in range(i+1,len(nums)):
+                if nums[i]+nums[b] == target:
+                    return [i,b]
+        
